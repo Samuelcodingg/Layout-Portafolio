@@ -1,6 +1,11 @@
-#header > ul, #header {
+#projects, #content-container, #header > ul, #header {
   display: flex;
   flex-flow: row wrap;
+}
+
+#aside > ul, #aside {
+  display: flex;
+  flex-flow: column wrap;
 }
 
 * {
@@ -13,7 +18,6 @@
   width: 90%;
   margin: 40px auto;
   box-shadow: 0px 0px 10px #ccc;
-  height: 700px;
 }
 
 #header {
@@ -46,6 +50,49 @@
 #header > ul > li:hover {
   background-color: #ccc;
   color: white;
+}
+
+#content-container {
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#aside {
+  flex-basis: 27%;
+  text-align: center;
+}
+
+#aside h2 {
+  display: block;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: 100;
+  color: #444;
+  border-bottom: 1px solid #ccc;
+}
+
+#aside > ul {
+  list-style: none;
+  padding-top: 20px;
+  height: 80%;
+}
+
+#aside > ul > li {
+  background-color: #eee;
+  margin-bottom: 20px;
+  padding: 20px 0px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+#aside > ul > li:hover {
+  background-color: #444;
+  color: white;
+}
+
+#projects {
+  flex-basis: 70%;
+  justify-content: space-evenly;
 }
 
 /*# sourceMappingURL=styles.css.map */
