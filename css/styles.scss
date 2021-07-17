@@ -1,0 +1,76 @@
+//Variables
+
+
+//Mixins
+
+@mixin principal-title ($color) {
+    font-size: 35px;
+    font-style: italic;
+    text-shadow: 0px 0px 2px #ccc;
+    color: $color;
+}
+
+@mixin paint-bg-effect($bg-color,$color) {
+    background-color: $bg-color;
+    color: $color;
+}
+
+//Herencias
+
+%flexing-horizontal{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+%flexing-vertical {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+//ESTILOS
+
+//Generales
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#principal-container {
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: 0px 0px 10px #ccc;
+    height: 700px;
+}
+
+//Cabecera
+
+#header {
+    @extend %flexing-horizontal;
+    justify-content: space-between;
+    padding: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+#header h1 {
+    flex-grow: 1;
+    @include principal-title(black);
+}
+
+#header > ul {
+    @extend %flexing-horizontal;
+    flex-grow: 1;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header > ul > li {
+    cursor: pointer;
+    transition: all 300ms;
+    padding: 20px;
+}
+
+#header > ul > li:hover {
+    @include paint-bg-effect(#ccc , white );
+}
