@@ -49,29 +49,30 @@
     justify-content: space-between;
     padding: 40px;
     border-bottom: 1px solid #ccc;
-}
 
-#header h1 {
-    flex-grow: 1;
-    @include principal-title(black);
-}
+    h1 {
+        flex-grow: 1;
+        @include principal-title(black);
+    }
 
-#header > ul {
-    @extend %flexing-horizontal;
-    flex-grow: 1;
-    list-style: none;
-    justify-content: flex-end;
-    align-items: center;
-}
+    ul {
+        @extend %flexing-horizontal;
+        flex-grow: 1;
+        list-style: none;
+        justify-content: flex-end;
+        align-items: center;
 
-#header > ul > li {
-    cursor: pointer;
-    transition: all 300ms;
-    padding: 20px;
-}
+        li {
+            cursor: pointer;
+            transition: all 300ms;
+            padding: 20px;
+        }
 
-#header > ul > li:hover {
-    @include paint-bg-effect(#ccc , white );
+        li:hover {
+            @include paint-bg-effect(#ccc , white );
+
+        }
+    }
 }
 
 //Seccion contenido
@@ -86,35 +87,34 @@
     @extend %flexing-vertical;
     flex-basis: 27%;
     text-align: center;
-}
 
-#aside h2 {
-    display: block;
-    padding-bottom: 20px;
-    font-size: 20px;
-    font-weight: 100;
-    color: #444;
-    border-bottom: 1px solid #ccc;
+    h2 {
+        display: block;
+        padding-bottom: 20px;
+        font-size: 20px;
+        font-weight: 100;
+        color: #444;
+        border-bottom: 1px solid #ccc;
+    }
 
-}
+    ul {
+        @extend %flexing-vertical;
+        list-style: none;
+        padding-top: 20px;
+        height: 80%;
 
-#aside > ul {
-    @extend %flexing-vertical;
-    list-style: none;
-    padding-top: 20px;
-    height: 80%;
-}
+        li {
+            background-color: #eee;
+            margin-bottom: 20px;
+            padding: 20px 0px;
+            cursor: pointer;
+            transition: all 300ms;
+        }
 
-#aside > ul > li {
-    background-color: #eee;
-    margin-bottom: 20px;
-    padding: 20px 0px;
-    cursor: pointer;
-    transition: all 300ms;
-}
-
-#aside > ul > li:hover {
-    @include paint-bg-effect(#444, white );
+        li:hover {
+            @include paint-bg-effect(#444, white );
+        }
+    }
 }
 
 #projects {
