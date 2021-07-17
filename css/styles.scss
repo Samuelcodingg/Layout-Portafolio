@@ -1,6 +1,3 @@
-//Variables
-
-
 //Mixins
 
 @mixin principal-title ($color) {
@@ -81,6 +78,7 @@
     @extend %flexing-horizontal;
     justify-content: space-between;
     padding: 20px;
+    border-bottom: 1px solid #ccc;
 }
 
 #aside {
@@ -121,7 +119,6 @@
     @extend %flexing-horizontal;
     flex-basis: 70%;
     justify-content: space-evenly;
-    
     .project {
         box-shadow: 0px 0px 5px #ccc;
         margin-bottom: 20px;
@@ -144,5 +141,22 @@
             }
 
         }
+    }
+}
+
+#footer {
+    @extend %flexing-horizontal;
+    padding: 40px 20px;
+    justify-content: space-between;
+
+    h2 {
+        @include principal-title(#444);
+        padding-right: 15px;
+    }
+
+    h3 {
+        font-size: 15px;
+        align-items: center;
+        color: #444;
     }
 }
