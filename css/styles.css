@@ -86,5 +86,24 @@
   flex-basis: 70%;
   justify-content: space-evenly;
 }
+#projects .project {
+  box-shadow: 0px 0px 5px #ccc;
+  margin-bottom: 20px;
+}
+#projects .project .project-info {
+  padding: 10px;
+}
+#projects .project .project-info a {
+  text-decoration: none;
+  color: black;
+  transition: all 300ms;
+}
+#projects .project .project-info p {
+  color: gray;
+}
+#projects .project .project-info a:hover {
+  background-color: none;
+  color: green;
+}
 
 /*# sourceMappingURL=styles.css.map */
