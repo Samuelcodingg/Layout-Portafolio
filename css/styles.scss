@@ -160,3 +160,41 @@
         color: #444;
     }
 }
+
+//Responsive
+
+@media (max-width: 884px){
+
+    #header {
+        flex-direction: column;
+        text-align: center;
+
+        ul {
+            margin-top: 40px;
+            justify-content: space-evenly;
+            
+            li {
+                flex-basis: 50%;
+            }
+        }
+    }
+
+    #content-container {
+        flex-direction: column;
+    }
+
+    #footer {
+        flex-direction: column;
+        
+        h2 {
+            order: 1;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            order: 2;
+            font-size: 13px;
+        }
+    }
+
+}
